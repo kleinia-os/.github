@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Questions, help and chat
+    url: https://kleinia.io/discord
+    about: Ask how something works, get help with your setup, or talk to the team on Discord.
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/kleinia-os/.github/blob/main/SECURITY.md
+    about: Please do not report vulnerabilities in public issues.
+  - name: 📖 Documentation
+    url: https://docs.kleinia.io
+    about: Install guides, concepts and reference.

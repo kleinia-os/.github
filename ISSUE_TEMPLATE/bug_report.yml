@@ -1,0 +1,63 @@
+name: 🐞 Bug report
+description: Something in Kleinia doesn't work as expected.
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Please search existing issues first.
+        **Security problems go to security@kleinia.io, not here.**
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Boot …
+        2. Run `agentctl …`
+        3. See error
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Installation / first boot
+        - Updates / rollback
+        - Desktop (GNOME, apps)
+        - Agents (agentd, agentctl, system agents)
+        - Model gateway
+        - Context / memory
+        - Scheduling / performance
+        - Hardware / drivers
+        - Docs / website
+        - Other / not sure
+    validations:
+      required: true
+  - type: textarea
+    id: version
+    attributes:
+      label: System information
+      description: Output of `rpm-ostree status` (or `bootc status`) and `uname -r`. Mention the hardware or VM if relevant.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant output, e.g. `journalctl -b -u agentd`. Remove any API keys or personal data.
+      render: shell
+  - type: checkboxes
+    id: rollback
+    attributes:
+      label: Regression?
+      options:
+        - label: This worked on an earlier image, and rolling back fixes it.
